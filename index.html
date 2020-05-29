@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
+        <style>
+            body{
+                /* font-family: 'VT323', monospace; */
+                font-family: 'Dokdo', cursive;
+            }
+
+            .a-container{
+                width: 65%;
+                margin: 0 auto;
+            }
+
+            .the-header{
+                text-align: center;
+                margin: 50px;
+            }
+
+            .the-header:hover::before{
+                content: 'here lies ';
+                color: red;
+            }
+
+            .the-header:hover::after{
+                content: ' that is being neglected by it\'s creator';
+                color: blue;
+            }
+
+            .the-flexible-nav{
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+                width: 65%;
+                margin: 0 auto; /* no margin for you */
+                font-size: 25px;
+                margin-bottom: 50px; /* sike */
+            }
+            
+            .a-flexible-item{
+                flex: 1;
+            }
+
+            #the-games-link:hover::after{
+                content: '\a (that you can play)';
+                white-space: pre;
+                font-weight: bold;
+            }
+
+            #the-other-link:hover::after{
+                content: '\a (that you can\'t play)';
+                white-space: pre;
+                font-weight: bold;
+            }
+
+            #the-about-link:hover::after{
+                content: '\a (don\'t expect too much)';
+                white-space: pre;
+                font-weight: bold;
+            }
+
+            #content:hover{
+                visibility: visible;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="a-container">
+            <h1 class="the-header">a website</h1>
+            <div class="the-flexible-nav">
+                <div class="a-flexible-item" id="the-games-link">
+                    <a href="games/index.html">some shit games</a>
+                </div>
+                <div class="a-flexible-item" id="the-other-link">
+                    <a href="other/index.html">other shit</a>
+                </div>
+                <div class="a-flexible-item" id="the-about-link">
+                    <a href="about/index.html">about the shit</a>
+                </div>
+            </div>
+
+            <div>
+
+            </div>
+        </div>
+    </body>
+
+    <script>
+        // this is just for me to remember how to make cookies
+        // I want to let users modify the font choice
+        // I also think it would be fun to expand on the website being abandoned by it's creator. Maybe add cookies that cause the website to fall apart?
+        document.cookie = "font-choice: crazy;";
+    </script>
+</html>

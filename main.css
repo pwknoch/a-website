@@ -1,0 +1,69 @@
+body{
+    /* font-family: 'VT323', monospace; */
+    font-family: 'Dokdo', cursive;
+}
+
+.a-container{
+    width: 65%;
+    margin: 0 auto;
+}
+
+.the-header{
+    text-align: center;
+    margin: 50px;
+}
+
+/* .the-header:hover::before{
+    content: 'here lies ';
+    color: red;
+}
+
+.the-header:hover::after{
+    content: ' that is being neglected by it\'s creator';
+    color: blue;
+} */
+
+.the-flexible-nav{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 65%;
+    margin: 0 auto; /* no margin for you */
+    font-size: 25px;
+    margin-bottom: 50px; /* :O */
+}
+
+.a-flexible-item{
+    flex: 1;
+}
+
+.a:hover::after{
+    content: ' broken';
+}
+
+.website:hover::before{
+    content: 'fixed ';
+}
+
+#the-games-link:hover::after{
+    content: '\a (that you can play)';
+    white-space: pre;
+    font-weight: bold;
+}
+
+#the-other-link:hover::after{
+    content: '\a (that you can\'t play)';
+    white-space: pre;
+    font-weight: bold;
+}
+
+#the-about-link:hover::after{
+    content: '\a (don\'t expect too much)';
+    white-space: pre;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

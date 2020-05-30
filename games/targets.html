@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .container {
+        margin: 0 auto;
+    }
+
+    .target{
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        border-radius: 50%;
+        display: inline-block;
+        transition: all 1s, visibility 1s;
+        visibility: hidden;
+    }
+
+    .visible{
+        visibility: visible;;
+    }
+</style>
+</head>
+<body>
+    <h1 id="percent-hit"></h1>
+    <h1 id="hit-count"></h1>
+
+    <script>
+        const height = window.innerHeight;
+        const width = window.innerWidth; 
+        const percentHitHeader = document.querySelector('#percent-hit');
+        const hitCountHeader = document.querySelector('#hit-count');
+
+        const speed = 250;
+
+        let hitCount = 0;
+        let totalCount = 0;
+
+        function runAway(button) {
+            button.style.top = `${getRandomInt(height)}px`;
+            button.style.left = `${getRandomInt(width)}px`;
+        }
+
+        function updateHeader(){
+            percentHitHeader.textContent = accuracy();
+            hitCountHeader.textContent = hitCount;
+        }
+        
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+
+        function spawnButton()
+        {
+            let targetButton = document.createElement('button');
+            targetButton.classList.add('target');
+            document.body.appendChild(targetButton);
+
+            var intervalId = setInterval(function() {
+                runAway(targetButton);
+            }, speed);
+
+            runAway(targetButton);
+
+            targetButton.addEventListener('mousedown', () => {
+                clearInterval(intervalId);
+                targetButton.remove();
+                hitCount++;
+                updateHeader()
+            });
+        }
+
+        function accuracy()
+        {
+            let realAccuracy = (hitCount/totalCount)*100 + '%';
+            return realAccuracy;
+        }
+
+        document.addEventListener('mousedown', function()
+        {
+            totalCount++;
+            updateHeader();
+        })
+
+        var spawnIntervalId = setInterval(spawnButton, speed);
+        
+        spawnButton();
+        spawnButton();
+        spawnButton();
+
+        document.addEventListener('transitionstart', e => {
+            if(e.propertyName != 'left') return;
+            if(e.srcElement.classList.contains('visible')) return;
+            e.srcElement.classList.add('visible');
+        });
+
+        function stop()
+        {
+            clearInterval(spawnIntervalId);
+            [...document.querySelectorAll('button')].forEach(f => f.remove());
+        }
+    </script>
+</body>
+</html>

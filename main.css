@@ -28,9 +28,8 @@ body{
     flex-direction: row;
     text-align: center;
     width: 65%;
-    margin: 0 auto; /* no margin for you */
+    margin: 0 auto;
     font-size: 25px;
-    margin-bottom: 50px; /* :O */
 }
 
 .a-flexible-item{
@@ -66,4 +65,23 @@ body{
 a {
     text-decoration: none;
     color: black;
+}
+
+.flexible-game-display-grid{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.game-display{
+    flex: 1;
+    margin: 5px;
+}
+
+.flexible-image{
+    max-width: 100%;
+}
+
+.hacky-fix{
+    padding-bottom: 70px;
 }

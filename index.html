@@ -43,6 +43,10 @@
                 flex: 1;
             }
 
+            .a:hover::after{
+                content: ' broken';
+            }
+
             #the-games-link:hover::after{
                 content: '\a (that you can play)';
                 white-space: pre;
@@ -68,7 +72,7 @@
     </head>
     <body>
         <div class="a-container">
-            <h1 class="the-header">a website</h1>
+            <h1 class="the-header"><span class="a">a</span> website</h1>
             <div class="the-flexible-nav">
                 <div class="a-flexible-item" id="the-games-link">
                     <a href="games/index.html">some shit games</a>

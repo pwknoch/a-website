@@ -7,3 +7,13 @@ Open a terminal in the root directory, run ```npm install``` and then ```npm sta
 ### Contribution
 
 That's a good one!
+
+### To-Dos
+
+- [ ] Include some games on the games page.  
+- [ ] Add some other stuff on the other page.  
+- [ ] Add some stuff about the page.
+- [ ] Add a state for the page with 3 stages.
+    - [ ] the base stage
+    - [ ] the moderately corrupted stage (after playing a game)
+    - [ ] the fully corrupted stage (after pressing the button)

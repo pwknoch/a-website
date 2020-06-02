@@ -17,3 +17,9 @@ That's a good one!
     - [ ] the base stage
     - [ ] the moderately corrupted stage (after playing a game)
     - [ ] the fully corrupted stage (after pressing the button)
+
+2048
+- [ ] Add rewind feature? Could be fun.
+- [ ] Fix formatting...
+- [ ] Add fail state.
+- [ ] Add additional difficulty? Occasionally add a 4 instead of a 2.

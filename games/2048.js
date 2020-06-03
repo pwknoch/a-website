@@ -187,6 +187,12 @@ function handleKey(key) {
 
     clearMerged();
     drawBoard();
+
+    // Combine into one method?
+    if(isBoardFull() && checkForLockout())
+    {
+        endGame();
+    }
 }
 
 function initialize() {
@@ -205,9 +211,42 @@ function checkForLockout() {
     // This needs to check if there is any possible solution.
     // If there isn't, we return true.
     // Otherwise, we return false.
+    console.time('lockout');
+    var isLockedOut = true;
+    var possibleDirections = ['up', 'down', 'left', 'right'];
+    loopBoard((x, y) => {
+        for (const direction of possibleDirections) {
+            if(gameBoard[x][y].value == getTile(x, y, direction)?.value) {
+                isLockedOut = false;
+                return isLockedOut;
+            } 
+        }
+    });
+
+    console.timeEnd('lockout');
+
+    return isLockedOut;
+}
+
+function isBoardFull() {
+    var isFull = true;
+
+    loopBoard((x, y) => {
+        if(gameBoard[x][y].value == 0) isFull = false;
+    });
+
+    return isFull;
 }
 
 function endGame() {
     // This needs to kill the game state somehow. Maybe offer a dialog and reset the board?
     // We might need to add a variable that is checked when handling key presses to ignore key presses when the game is 'over'.
+}
+
+function generateFullBadBoard() {
+    var z = 1;
+    loopBoard((x, y) => {
+        gameBoard[x][y].value = z;
+        z++;
+    });
 }

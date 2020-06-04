@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" id="name"/>
+        <button type="button">Speak!</button>
+
+        <script type="text/javascript">
+            var button = document.querySelector('button')
+            var nameInput = document.querySelector('#name');
+            button.addEventListener('click', function() {
+                var utterance = new SpeechSynthesisUtterance(`Well, hello there ${nameInput.value}! Would you like to play a game?`);
+                speechSynthesis.speak(utterance);
+            });
+        </script>
+    </body>
+</html>

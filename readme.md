@@ -23,3 +23,7 @@ That's a good one!
 - [ ] Fix formatting...
 - [X] Add fail state.
 - [X] Add additional difficulty? Occasionally add a 4 instead of a 2.
+- [ ] Use localStorage?
+
+Other Games
+- [ ] Poker/Blackjack? Maybe use speechSynthesis for fun?

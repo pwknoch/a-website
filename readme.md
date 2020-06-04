@@ -19,7 +19,7 @@ That's a good one!
     - [ ] the fully corrupted stage (after pressing the button)
 
 2048
-- [ ] Add rewind feature? Could be fun.
+- [ ] Add rewind feature? Could be fun. (Note for rewind feature. Store serializedGameState in temporary variable at start of game loop. Only save it to global variable when movedAtAll is true.)
 - [ ] Fix formatting...
 - [X] Add fail state.
 - [X] Add additional difficulty? Occasionally add a 4 instead of a 2.

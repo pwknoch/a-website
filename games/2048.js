@@ -1,5 +1,6 @@
 // if we have an array that is 4 x 4, then we assume that the origin is at the lower left hand corner of the array, at [0][0]. To it's left would be [1][0], and above it would be [0][1].
 var gameBoard = [];
+var serializedGameState = JSON.stringify(gameBoard);
 
 // Possible keys to register.
 var possibleKeys = ['ArrowRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown'];
@@ -48,7 +49,13 @@ function findFreeSpots() {
 
 function createTile(freeSpots) {
     var tile = freeSpots[getRandomInt(freeSpots.length)];
-    gameBoard[tile[0]][tile[1]].value = 2;
+    var value = 2;
+
+    if(freeSpots.length < 5) {
+        if(getRandomInt(5) == 1) value = 4;
+    }
+
+    gameBoard[tile[0]][tile[1]].value = value;
 }
 
 function getRandomInt(max) {
@@ -166,6 +173,10 @@ function getDirectionByKey(key) {
 }
 
 function handleKey(key) {
+    // Not sure why this isn't working :<
+    // TODO: Fix this?
+    serializedGameState = JSON.stringify(gameBoard);
+
     var moved, movedAtAll = false;
     var direction = getDirectionByKey(key);
 
@@ -179,6 +190,7 @@ function handleKey(key) {
     if(movedAtAll) {
         createTile(findFreeSpots());
     } else {
+        // TODO: Oops?
         if(checkForLockout())
         {
             endGame();
@@ -193,6 +205,11 @@ function handleKey(key) {
     {
         endGame();
     }
+}
+
+function undoMove() {
+    gameBoard = JSON.parse(serializedGameState);
+    drawBoard();
 }
 
 function initialize() {

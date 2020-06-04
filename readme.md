@@ -10,7 +10,7 @@ That's a good one!
 
 ### To-Dos
 
-- [ ] Include some games on the games page.  
+- [X] Include some games on the games page.  
 - [ ] Add some other stuff on the other page.  
 - [ ] Add some stuff about the page.
 - [ ] Add a state for the page with 3 stages.
@@ -21,5 +21,5 @@ That's a good one!
 2048
 - [ ] Add rewind feature? Could be fun.
 - [ ] Fix formatting...
-- [ ] Add fail state.
-- [ ] Add additional difficulty? Occasionally add a 4 instead of a 2.
+- [X] Add fail state.
+- [X] Add additional difficulty? Occasionally add a 4 instead of a 2.

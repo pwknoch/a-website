@@ -173,9 +173,7 @@ function getDirectionByKey(key) {
 }
 
 function handleKey(key) {
-    // Not sure why this isn't working :<
-    // TODO: Fix this?
-    serializedGameState = JSON.stringify(gameBoard);
+    var tempSerializedGameState = JSON.stringify(gameBoard);
 
     var moved, movedAtAll = false;
     var direction = getDirectionByKey(key);
@@ -188,6 +186,7 @@ function handleKey(key) {
     } while(moved);
     
     if(movedAtAll) {
+        serializedGameState = tempSerializedGameState;
         createTile(findFreeSpots());
     } else {
         // TODO: Oops?

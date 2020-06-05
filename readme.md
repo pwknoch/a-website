@@ -27,3 +27,6 @@ That's a good one!
 
 Other Games
 - [ ] Poker/Blackjack? Maybe use speechSynthesis for fun?
+
+Other Stuff
+- [ ] Something to pull the last ~10 commits and display a feed.

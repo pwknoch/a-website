@@ -1,6 +1,6 @@
 // if we have an array that is 4 x 4, then we assume that the origin is at the lower left hand corner of the array, at [0][0]. To it's left would be [1][0], and above it would be [0][1].
 var gameBoard = [];
-var serializedGameState = JSON.stringify(gameBoard);
+var pastGameStates = new maxStack(30);
 
 // Possible keys to register.
 var possibleKeys = ['ArrowRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown'];
@@ -186,7 +186,7 @@ function handleKey(key) {
     } while(moved);
     
     if(movedAtAll) {
-        serializedGameState = tempSerializedGameState;
+        pastGameStates.push(tempSerializedGameState);
         createTile(findFreeSpots());
     } else {
         // TODO: Oops?
@@ -207,8 +207,12 @@ function handleKey(key) {
 }
 
 function undoMove() {
-    gameBoard = JSON.parse(serializedGameState);
-    drawBoard();
+    if(pastGameStates.isEmpty()){
+        alert("You can't undo anymore!");
+    } else {
+        gameBoard = JSON.parse(pastGameStates.pop());
+        drawBoard();
+    }
 }
 
 function initialize() {
@@ -266,3 +270,6 @@ function generateFullBadBoard() {
         z++;
     });
 }
+
+var undoButton = document.querySelector('#undo-button');
+undoButton.addEventListener('click', undoMove);

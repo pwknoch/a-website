@@ -37,6 +37,7 @@
         [...speakables].forEach(speakable => speakable.addEventListener('mouseover', handleSpeakable));
         
         function handleSpeakable() {
+            return;
             if(!speechSynthesis.speaking)
             {
                 var utterance = new SpeechSynthesisUtterance(this.dataset.voice);

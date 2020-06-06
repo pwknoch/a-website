@@ -1,20 +1,66 @@
 <!DOCTYPE html>
 
-<html>
-    <head>
+<link href="cards.css" rel="stylesheet">
+<script src="cards.js" type="text/javascript"></script>
 
-    </head>
-    <body>
-        <input type="text" id="name"/>
-        <button type="button">Speak!</button>
+<div class="cards-container">
+    <div class="dealer">
+    </div>
+    <div class="deck-container">
+        <div class="deck">THE DECK</div>
+    </div>
+    <div class="player">
+    </div>
+    <div class="buttons">
+        <button onclick="addDealerCard()">Add Card To Dealer</button>
+        <button onclick="addPlayerCard()">Add Card To Player</button>
+    </div>
+</div>
 
-        <script type="text/javascript">
-            var button = document.querySelector('button')
-            var nameInput = document.querySelector('#name');
-            button.addEventListener('click', function() {
-                var utterance = new SpeechSynthesisUtterance(`Well, hello there ${nameInput.value}! Would you like to play a game?`);
-                speechSynthesis.speak(utterance);
-            });
-        </script>
-    </body>
-</html>
+<script>
+    var dealerDiv = document.querySelector('.dealer');
+    var playerDiv = document.querySelector('.player');
+    var cards = new cardPile(2);
+
+    // TODO: Combine these methods...
+    function addDealerCard() {
+        var card = cards.drawCard();
+        var cardHtml = 
+        `<div class="card in-deck ${card.suit} ${card.rank}">
+            <div class="suit"></div>
+            <div class="rank"></div>
+        </div>`;
+
+        dealerDiv.insertAdjacentHTML('beforeend', cardHtml);
+
+        setTimeout(() => document.querySelector('.in-deck').classList.toggle('in-deck'), 50)
+    }
+
+    // TODO: Combine these methods...
+    function addPlayerCard() {
+        var card = cards.drawCard();
+        var cardHtml = 
+        `<div class="card in-deck ${card.suit} ${card.rank}">
+            <div class="suit"></div>
+            <div class="rank"></div>
+        </div>`;
+
+        playerDiv.insertAdjacentHTML('beforeend', cardHtml);
+
+        setTimeout(() => document.querySelector('.in-deck').classList.toggle('in-deck'), 50)
+    }
+</script>
+<!-- For Blackjack we need to create a few functions before we can actually play the game
+
+    // this here is a bad comment, lol
+    drawCard: using a consistent and reshuffled deck, draw a random card and remove it from the deck. Maybe create a deck of cards class, like maxStack? Or cardpile? Have it have a card pool and a actual cards set. actual cards set is an instance of card pool, and then cards are drawn from it, and when it's empty, actual cards set is reset to card pool.
+
+    okay we have a cardPile class for drawing cards and initializing some objects.
+    we can focus on a variety of things next
+    lets pick one
+
+    building the cards visually? that could be fun, and also is the thing that I'm the worst at.
+    setting up the game flow itself. pretty ez tbh. but also the thing I'm good at.
+
+    lets build a card and animate that shit.
+-->

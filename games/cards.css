@@ -1,0 +1,103 @@
+.cards-container{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.deck-container{
+    align-content: flex-end;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.dealer,.player{
+    display: flex;
+    margin: 0 auto;
+    transition: all 1.5s ease;
+    height: 4.7em;
+}
+
+.dealer{
+    padding-bottom: 2em;
+}
+
+.deck{
+    width: 3.3em;
+    height: 4.6em;
+    border: 1px solid black;
+    border-radius: .3em;
+    box-shadow: 2px 2px 5px black;
+}
+
+.card {
+    width: 3.3em;
+    height: 4.6em;
+    border: 1px solid black;
+    border-radius: .3em;
+    box-shadow: 2px 2px 5px black;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin: 5px;
+    transition: all 1s ease;
+}
+
+.suit {
+    align-self: flex-start;
+    font-size: 1.5em;
+    line-height: 1;
+    text-align: left;
+    padding: 1px;
+}
+
+.diamond .suit::after {content: '\2666';}
+.club .suit::after {content: '\2663';}
+.spade .suit::after {content: '\2660';}
+.heart .suit::after {content: '\2665';}
+
+.diamond.card {
+    color: red;
+}
+
+.club.card{
+    color: black;
+}
+
+.spade.card{
+    color: black;
+}
+
+.heart.card{
+    color: red;
+}
+
+.rank{
+    text-align: center;
+    margin: 0 auto;
+    padding-top: .5em;
+    font-size: larger;
+}
+
+.ace .rank::after {content: 'A';}
+.two .rank::after {content: '2';}
+.three .rank::after {content: '3';}
+.four .rank::after {content: '4';}
+.five .rank::after {content: '5';}
+.six .rank::after {content: '6';}
+.seven .rank::after {content: '7';}
+.eight .rank::after {content: '8';}
+.nine .rank::after {content: '9';}
+.ten .rank::after {content: '10';}
+.jack .rank::after {content: 'J'}
+.queen .rank::after {content: 'Q'}
+.king .rank::after {content: 'K'}
+
+.dealer .card.in-deck{
+    transform: translate(1500%, 200%);
+}
+
+.player .card.in-deck{
+    transform: translate(1500%, -150%);
+}

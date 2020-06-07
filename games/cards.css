@@ -16,20 +16,20 @@
     display: flex;
     margin: 0 auto;
     transition: all 1.5s ease;
-    min-height: 6em;
+    min-height: 9em;
 }
 
 .deck{
-    width: 3.3em;
-    height: 4.6em;
+    width: 5.68em;
+    height: 8em;
     border: 1px solid black;
     border-radius: .3em;
     box-shadow: 2px 2px 5px black;
 }
 
 .card {
-    width: 3.3em;
-    height: 4.6em;
+    width: 5.68em;
+    height: 8em;
     border: 1px solid black;
     border-radius: .3em;
     box-shadow: 2px 2px 5px black;
@@ -42,10 +42,11 @@
 
 .suit {
     align-self: flex-start;
-    font-size: 1.5em;
+    font-size: 3em;
     line-height: 1;
     text-align: left;
     padding: 1px;
+    transform: translateY(-.1em);
 }
 
 .diamond .suit::after {content: '\2666';}
@@ -72,8 +73,7 @@
 .rank{
     text-align: center;
     margin: 0 auto;
-    padding-top: .5em;
-    font-size: larger;
+    font-size: 3em;
 }
 
 .ace .rank::after {content: 'A';}
@@ -98,6 +98,42 @@
     transform: translate(1500%, -150%) rotate(360deg);
 }
 
+button{
+    display: block;
+    border: 0;
+    margin: 3px;
+    transition: flex 1s ease, font-size 1s ease, box-shadow .1s ease, transform .1s ease;
+    cursor: pointer;
+}
+
+button:active{
+    box-shadow: 0px 0px 5px #666;
+    transform: scale(1.4, 1.4);
+}
+
+button:hover{
+    filter: brightness(85%);
+}
+
 .buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.debug{
+    display: none !important;
+}
+
+.buttons div{
     margin: 0 auto;
+    flex: auto;
+    display: flex;
+}
+
+.buttons .active button{
+    flex: 4;
+    font-size: 2vw !important;
+    padding: 1vw;
+    background-color: lightgreen;
+    border-radius: 5px;
 }

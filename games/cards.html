@@ -13,8 +13,27 @@
     </div>
     <br/>
     <div class="buttons">
-        <button onclick="addDealerCard()">Add Card To Dealer</button>
-        <button onclick="addPlayerCard()">Add Card To Player</button>
+        <div class="play-row">
+            <button id="hit">Hit</button>
+            <button id="stand">Stand</button>
+            <button id="double-down">Double Down</button>
+            <button id="split">Split</button>
+        </div>
+
+        <div class="bet-row active">
+            <button class="bet-button" data-amount="10">$10</button>
+            <button class="bet-button" data-amount="25">$25</button>
+            <button class="bet-button" data-amount="50">$50</button>
+            <button class="bet-button" data-amount="100">$100</button>
+            <button class="bet-button" data-amount="250">$250</button>
+            <button id="deal">Deal</button>
+        </div>
+
+        <div class="">
+            <button onclick="addDealerCard()">Add Card To Dealer</button>
+            <button onclick="addPlayerCard()">Add Card To Player</button>
+        </div>
+        <br/>
     </div>
 </div>
 
@@ -34,7 +53,7 @@
 
         dealerDiv.insertAdjacentHTML('beforeend', cardHtml);
 
-        setTimeout(() => document.querySelector('.in-deck').classList.toggle('in-deck'), 10)
+        setTimeout(() => document.querySelector('.in-deck').classList.toggle('in-deck'), 20)
     }
 
     // TODO: Combine these methods...
@@ -48,7 +67,7 @@
 
         playerDiv.insertAdjacentHTML('beforeend', cardHtml);
 
-        setTimeout(() => document.querySelector('.in-deck').classList.toggle('in-deck'), 10)
+        setTimeout(() => document.querySelector('.in-deck').classList.toggle('in-deck'), 20)
     }
 </script>
 

@@ -25,11 +25,10 @@ body{
 }
 
 .bouncy{
-    transition: all 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    transition: all 1s cubic-bezier(0.18, 0.89, 0.32, 1.28) !important;
 }
 
 .bouncy:hover{
-    transition: all 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     font-size: 4vw;
 }
 
@@ -50,13 +49,18 @@ body{
     transform: translateX(-5vw);
 }
 
-.about-link:hover{
-    transform: translateX(5vw);
-}
-
 a {
     text-decoration: none;
     color: black;
+}
+
+.a-flexible-item:nth-of-type(2):hover{
+    text-decoration: line-through;
+}
+
+.about-link:hover{
+    transform: translateX(5vw);
+    text-decoration: line-through;
 }
 
 .flexible-game-display-grid{

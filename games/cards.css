@@ -95,9 +95,9 @@
 .king .rank::after {content: 'K'}
 
 .dealer .card.in-deck{
-    transform: translate(1500%, 200%);
+    transform: translate(1500%, 200%) rotate(360deg);
 }
 
 .player .card.in-deck{
-    transform: translate(1500%, -150%);
+    transform: translate(1500%, -150%) rotate(360deg);
 }

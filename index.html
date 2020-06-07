@@ -7,22 +7,22 @@
     </head>
     <body>
         <div class="a-container">
-            <h1 class="the-header"><a class="speakable" href="/index.html" data-voice="can't you read? it's a website"><span class="a">a</span> <span class="website">website</span></a></h1>
+            <h1 class="the-header bouncy"><a class="speakable" href="/index.html" data-voice="can't you read? it's a website"><span class="a">a</span> <span class="website">website</span></a></h1>
             <div class="the-flexible-nav">
-                <div class="a-flexible-item speakable" id="the-games-link" data-voice="these aren't great games, but they're my games, so don't judge me.">
-                    <a href="/games/index.html">just some games (actual content here)</a>
+                <div class="a-flexible-item speakable bouncy">
+                    <a href="/games/index.html">the games</a>
                 </div>
-                <div class="a-flexible-item speakable" id="the-other-link" data-voice="it's just some other stuff. nothing special. just stuff.">
-                    <a href="/other/index.html">other stuff</a>
+                <div class="a-flexible-item speakable bouncy">
+                    <a href="/other/index.html">the uncategorizeable</a>
                 </div>
-                <div class="a-flexible-item speakable" id="the-about-link" data-voice="theres nothing here. maybe someday. who knows.">
-                    <a href="/about/index.html">about the stuff</a>
+                <div class="a-flexible-item speakable about-link bouncy">
+                    <a href="/about/index.html">about?</a>
                 </div>
                 <div class="hacky-fix"></div>
             </div>
-
+            <!-- Content -->
             <div>
-
+                
             </div>
         </div>
     </body>
@@ -31,18 +31,18 @@
         // this is just for me to remember how to make cookies
         // I want to let users modify the font choice
         // I also think it would be fun to expand on the website being abandoned by it's creator. Maybe add cookies that cause the website to fall apart?
-        document.cookie = "font-choice: crazy;";
+        // document.cookie = "font-choice: crazy;";
 
-        var speakables = document.querySelectorAll('.speakable');
-        [...speakables].forEach(speakable => speakable.addEventListener('mouseover', handleSpeakable));
+        // var speakables = document.querySelectorAll('.speakable');
+        // [...speakables].forEach(speakable => speakable.addEventListener('mouseover', handleSpeakable));
         
-        function handleSpeakable() {
-            return;
-            if(!speechSynthesis.speaking)
-            {
-                var utterance = new SpeechSynthesisUtterance(this.dataset.voice);
-                speechSynthesis.speak(utterance);
-            }
-        }
+        // function handleSpeakable() {
+        //     return;
+        //     if(!speechSynthesis.speaking)
+        //     {
+        //         var utterance = new SpeechSynthesisUtterance(this.dataset.voice);
+        //         speechSynthesis.speak(utterance);
+        //     }
+        // }
     </script>
 </html>

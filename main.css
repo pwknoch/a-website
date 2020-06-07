@@ -1,27 +1,19 @@
 body{
     /* font-family: 'VT323', monospace; */
     font-family: 'Dokdo', cursive;
+    background-image: linear-gradient(to right, black, white 18%, white 83%, black);
 }
 
 .a-container{
     width: 65%;
     margin: 0 auto;
+    background-color: white;
 }
 
 .the-header{
     text-align: center;
     margin: 50px;
 }
-
-/* .the-header:hover::before{
-    content: 'here lies ';
-    color: red;
-}
-
-.the-header:hover::after{
-    content: ' that is being neglected by it\'s creator';
-    color: blue;
-} */
 
 .the-flexible-nav{
     display: flex;
@@ -32,34 +24,34 @@ body{
     font-size: 25px;
 }
 
+.bouncy{
+    transition: all 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.bouncy:hover{
+    transition: all 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    font-size: 4vw;
+}
+
 .a-flexible-item{
     flex: 1;
 }
 
-.a:hover::after{
-    content: ' broken';
+.a-flexible-item:hover{
+    flex: 6;
 }
 
-.website:hover::before{
-    content: 'fixed ';
+.a-flexible-item a{
+    display: block;
+    height: 100%;
 }
 
-#the-games-link:hover::after{
-    content: '\a (that you can play)';
-    white-space: pre;
-    font-weight: bold;
+.a-flexible-item:first-of-type:hover{
+    transform: translateX(-5vw);
 }
 
-#the-other-link:hover::after{
-    content: '\a (that you can\'t play)';
-    white-space: pre;
-    font-weight: bold;
-}
-
-#the-about-link:hover::after{
-    content: '\a (don\'t expect too much)';
-    white-space: pre;
-    font-weight: bold;
+.about-link:hover{
+    transform: translateX(5vw);
 }
 
 a {

@@ -11,6 +11,7 @@
     </div>
     <div class="player">
     </div>
+    <br/>
     <div class="buttons">
         <button onclick="addDealerCard()">Add Card To Dealer</button>
         <button onclick="addPlayerCard()">Add Card To Player</button>
@@ -33,7 +34,7 @@
 
         dealerDiv.insertAdjacentHTML('beforeend', cardHtml);
 
-        setTimeout(() => document.querySelector('.in-deck').classList.toggle('in-deck'), 50)
+        setTimeout(() => document.querySelector('.in-deck').classList.toggle('in-deck'), 10)
     }
 
     // TODO: Combine these methods...
@@ -47,7 +48,7 @@
 
         playerDiv.insertAdjacentHTML('beforeend', cardHtml);
 
-        setTimeout(() => document.querySelector('.in-deck').classList.toggle('in-deck'), 50)
+        setTimeout(() => document.querySelector('.in-deck').classList.toggle('in-deck'), 10)
     }
 </script>
 <!-- For Blackjack we need to create a few functions before we can actually play the game

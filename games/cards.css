@@ -16,11 +16,7 @@
     display: flex;
     margin: 0 auto;
     transition: all 1.5s ease;
-    height: 4.7em;
-}
-
-.dealer{
-    padding-bottom: 2em;
+    min-height: 6em;
 }
 
 .deck{

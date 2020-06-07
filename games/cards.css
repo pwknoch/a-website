@@ -97,3 +97,7 @@
 .player .card.in-deck{
     transform: translate(1500%, -150%) rotate(360deg);
 }
+
+.buttons{
+    margin: 0 auto;
+}

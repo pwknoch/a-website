@@ -1,4 +1,27 @@
+var totalBet = 0, totalCash = 0;
+var betButtons = document.querySelectorAll('.bet-button');
+var notEnoughCashMessage = document.querySelector('#insufficient-money');
+var cashDisplays = document.querySelectorAll('.total-cash');
 
+[...betButtons].forEach(f => f.addEventListener('click', bet));
+
+function bet() {
+    if(totalCash > this.dataset.amount){
+        totalBet += this.dataset.amount;
+        totalCash -= this.dataset.amount;
+    } else {
+        this.classList.add('invalid');
+        var obj = this;
+        setTimeout(() => obj.classList.remove('invalid'), 200);
+
+        notEnoughCashMessage.classList.remove('off-screen');
+        setTimeout(() => notEnoughCashMessage.classList.add('off-screen'), 5000);
+    }
+}
+
+function updateCashDisplay() {
+    // [...cashDisplays].forEach(() => )
+}
 
 class cardPile{
     constructor(deckCount) {

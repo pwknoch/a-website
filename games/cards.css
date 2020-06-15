@@ -7,8 +7,6 @@
 }
 
 .deck-container{
-    align-content: flex-end;
-    justify-content: flex-end;
     display: flex;
 }
 
@@ -25,6 +23,21 @@
     border: 1px solid black;
     border-radius: .3em;
     box-shadow: 2px 2px 5px black;
+    margin-right: 10px;
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+.end-of-round-message {
+    font-size: 0;
+    align-self: center;
+    justify-self: flex-start;
+    transition: font-size .4s ease-in;
+    flex: 1;
+}
+
+.expand {
+    font-size: 6vw !important;
 }
 
 .deck{
@@ -126,6 +139,19 @@ button:hover{
 .buttons{
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+}
+
+.flex-1{
+    flex: 1;
+}
+
+.bet-and-cash{
+    font-size: 2vw;
+}
+
+.row{
+    display: flex;
 }
 
 .debug{
@@ -152,9 +178,18 @@ button:hover{
 
 #insufficient-money{
     color: salmon;
-    transition: all 1s ease;
+    transition: all .4s ease;
 }
 
 #insufficient-money.off-screen{
-    transform: translateX(-1000px);
+    transform: translateX(-100vw);
+}
+
+.total-cash{
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.down-card{
+    transform: rotateY(180deg);
 }

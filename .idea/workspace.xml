@@ -3,26 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ab61ab49-bb51-49f0-b6f7-3651e214454f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/Build/New folder.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/Build/New folder.framework.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/Build/New folder.loader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/Build/New folder.wasm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/Build/WebGLBuild.data.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/Build/WebGLBuild.framework.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/Build/WebGLBuild.loader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/Build/WebGLBuild.wasm.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/TemplateData/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/TemplateData/fullscreen-button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/TemplateData/progress-bar-empty-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/TemplateData/progress-bar-empty-light.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/TemplateData/progress-bar-full-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/TemplateData/progress-bar-full-light.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/TemplateData/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/TemplateData/unity-logo-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/TemplateData/unity-logo-light.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/TemplateData/webgl-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/brackeys.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/games/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +33,7 @@
       <option name="presentableId" value="Default" />
       <updated>1608453634597</updated>
       <workItem from="1608453636640" duration="166000" />
-      <workItem from="1608499166702" duration="36000" />
+      <workItem from="1608499166702" duration="396000" />
     </task>
     <servers />
   </component>

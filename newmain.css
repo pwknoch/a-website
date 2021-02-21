@@ -1,0 +1,87 @@
+.header-main-text {
+    font-size: 80px;
+    color: #95D7AE;
+    font-family: Raleway, serif;
+}
+
+.header-text {
+    margin-top: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-secondary-text {
+    font-size: 40px;
+    font-family: Raleway, serif;
+}
+
+.game-display-header {
+    color: #95D7AE;
+    font-family: Raleway, serif;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+.game-display-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FF6978;
+    font-family: "Goudy Old Style", serif;
+}
+
+.game-display{
+    flex: 1;
+}
+
+.flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.main-page-content{
+    width: 100%;
+    height: 700px;
+}
+
+.flip-card-outer {
+    perspective: 1000px;
+}
+
+.flip-card-title{
+    height: 1em;
+    width: 100%;
+}
+
+.flip-card-gaming, .flip-card-web{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    background-color: #FFF;
+    box-shadow: 0 1px 1px rgb(16 27 30 / 15%), 0 2px 2px rgb(16 27 30 / 15%), 0 4px 4px rgb(16 27 30 / 15%), 0 8px 8px rgb(16 27 30 / 15%), 0 16px 16px rgb(16 27 30 / 15%);
+    border-radius: 3px;
+}
+
+.flip-card-front, .flip-card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    transform: rotateX(180deg);
+}
+
+.flip-card-rotate {
+    transform: rotateX(180deg);
+}

@@ -2,12 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab61ab49-bb51-49f0-b6f7-3651e214454f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/images/2048preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/blackjackPreview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/targetsPreview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newIndex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newmain.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/cards.css" beforeDir="false" afterPath="$PROJECT_DIR$/games/cards.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/cards.html" beforeDir="false" afterPath="$PROJECT_DIR$/games/cards.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/games/cards.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -18,11 +33,39 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="liveEdit" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\A Website\a-website\images" />
+      <recent name="C:\A Website\a-website" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\A Website\a-website\images" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="git pull" />
+      <command value="git status" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="newIndex.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/a-website/newIndex.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.newIndex.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -34,10 +77,26 @@
       <updated>1608453634597</updated>
       <workItem from="1608453636640" duration="166000" />
       <workItem from="1608499166702" duration="396000" />
+      <workItem from="1610430018837" duration="7025000" />
+      <workItem from="1611294588118" duration="4449000" />
+      <workItem from="1612648238601" duration="704000" />
+      <workItem from="1613874949906" duration="1914000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

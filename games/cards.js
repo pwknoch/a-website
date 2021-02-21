@@ -91,6 +91,7 @@ var dealButton = document.querySelector('#deal');
 var betButtons = document.querySelectorAll('.bet-button');
 var hitButton = document.querySelector('#hit');
 var standButton = document.querySelector('#stand');
+var doubleButton = document.querySelector('#double-down');
 var endOfRoundMsg = document.querySelector('.end-of-round-message');
 var underConstructionButtons = document.querySelectorAll('.under-construction');
 
@@ -101,6 +102,7 @@ var playerCards = new hand(), dealerCards = new hand();
 dealButton.addEventListener('click', deal);
 hitButton.addEventListener('click', hit);
 standButton.addEventListener('click', stand);
+doubleButton.addEventListener('click', doubleDown);
 
 updateCashDisplay();
 
@@ -132,10 +134,10 @@ function deal() {
     }
 
     // TODO: refactor this maybe...
-    addCard('player');
-    addCard('dealer');
-    addCard('player');
-    addCard('dealer', true);
+    addCard('player', false, playerDiv);
+    addCard('dealer', false, dealerDiv);
+    addCard('player', false, playerDiv);
+    addCard('dealer', true, dealerDiv);
 
     phase = 'play';
     updatePhase();
@@ -144,7 +146,7 @@ function deal() {
 function hit() {
     if(phase != 'play') return;
 
-    addCard('player');
+    addCard('player', false, playerDiv);
     if(playerCards.getHandValue().lowTotal > 21) {
         phase = 'dealer';
         updatePhase();
@@ -163,6 +165,32 @@ function stand() {
     dealerTurn();
 }
 
+function doubleDown() {
+    if(phase != 'play') return;
+
+    if(totalCash < totalBet)
+    {
+        alert("You don't have enough cash!");
+        return;
+    }
+
+    totalCash -= totalBet;
+    totalBet += totalBet;
+    updateCashDisplay();
+
+    addCard('player', false, playerDiv);
+
+    dealerTurn();
+}
+
+function split() {
+    if(phase != 'play') return;
+
+    if(playerCards.cards.length !== 2 || playerCards.cards.some(f => f.rank !== playerCards.cards[0].rank)) return;
+
+    //now that we can figure out what can be split, we need to actually split them.
+}
+
 function dealerTurn() {
     phase = 'dealer';
     updatePhase();
@@ -170,7 +198,7 @@ function dealerTurn() {
     revealDownCard();
 
     while(dealerCards.getHandValue().highTotal <= 17) {
-        addCard('dealer');
+        addCard('dealer', false, dealerDiv);
     }
 
     setTimeout(calculateWinner, 1000);
@@ -186,7 +214,7 @@ function clearBoard(){
 }
 
 function calculateWinner() {
-    if(dealerCards.getHandValue().lowTotal > 21){
+    if(dealerCards.getHandValue().lowTotal > 21 || (dealerCards.getHandValue().highTotal > 21 && dealerCards.cards.length === 2)) {
         // bust
         totalCash += (totalBet * 2);
         totalBet = 0;
@@ -256,37 +284,9 @@ function getRandomInt(max) {
 
 var dealerDiv = document.querySelector('.dealer');
 var playerDiv = document.querySelector('.player');
-var cards = new cardPile(2);
+let cards = new cardPile(2);
 
-// TODO: Combine these methods...
-function addDealerCard() {
-    var card = cards.drawCard();
-    var cardHtml = 
-    `<div class="card in-deck ${card.suit} ${card.rank}">
-        <div class="suit"></div>
-        <div class="rank"></div>
-    </div>`;
-
-    dealerDiv.insertAdjacentHTML('beforeend', cardHtml);
-
-    setTimeout(() => document.querySelector('.in-deck').classList.toggle('in-deck'), 20)
-}
-
-// TODO: Combine these methods...
-function addPlayerCard() {
-    var card = cards.drawCard();
-    var cardHtml = 
-    `<div class="card in-deck ${card.suit} ${card.rank}">
-        <div class="suit"></div>
-        <div class="rank"></div>
-    </div>`;
-
-    playerDiv.insertAdjacentHTML('beforeend', cardHtml);
-
-    setTimeout(() => document.querySelector('.in-deck').classList.toggle('in-deck'), 20)
-}
-
-function addCard(who, isDown) {
+function addCard(who, isDown, div) {
     var card = cards.drawCard();
     card.isDown = isDown ?? false;
 
@@ -307,10 +307,10 @@ function addCard(who, isDown) {
     }
 
     if(who === 'player'){
-        playerDiv.insertAdjacentHTML('beforeend', cardHtml);
+        div.insertAdjacentHTML('beforeend', cardHtml);
         playerCards.cards.push(card);
     } else {
-        dealerDiv.insertAdjacentHTML('beforeend', cardHtml);
+        div.insertAdjacentHTML('beforeend', cardHtml);
         dealerCards.cards.push(card);
     }
 

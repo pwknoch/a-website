@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="newmain.css"/>
+    <meta charset="UTF-8">
+    <title>Peter's Game Dev</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911" rel="stylesheet">
+</head>
+<body style="background: #98bec8; overflow:hidden">
+<!--#131515-->
+<div style="margin: 0 auto; width: 60%; text-align: center;">
+    <div class="header-text">
+        <div class="header-main-text">
+            Peter's
+        </div>
+        <div class="header-secondary-text">
+            <div class="flip-card-outer flip-card-title">
+                <div class="flip-card-inner category-text">
+                    <div style="color: #FF6978" class="flip-card-front">
+                        Game
+                    </div>
+                    <div style="color: #FF6978" class="flip-card-back">
+                        Web
+                    </div>
+                </div>
+            </div>
+            <div style="color: #95D7AE">
+                Dev
+            </div>
+        </div>
+    </div>
+
+    <br/>
+    <br/>
+
+    <div class="main-page-content flip-card-outer">
+        <div class="flip-card-inner">
+            <div class="flip-card-gaming">
+                <div class="game-display-header">
+                    Javascript (no libraries used)
+                </div>
+                <div class="game-display-box">
+                    <div class="game-display">
+                        <div><img src="images/targetsPreview.png" style="height: 200px; width: 200px; border-radius: 50%;"></div>
+                        <div>Targets</div>
+                    </div>
+                    <div class="game-display">
+                        <div><img src="images/2048preview.png" style="height: 200px; width: 200px; border-radius: 50%;"></div>
+                        <div>2048</div>
+                    </div>
+                    <div class="game-display">
+                        <div><img src="images/blackjackPreview.png" style="height: 200px; width: 200px; border-radius: 50%;"></div>
+                        <div>Cards</div>
+                    </div>
+                </div>
+
+                <div class="game-display-header">
+                    Unity (compiled with WebGL)
+                </div>
+                <div class="game-display-box">
+                    <div class="game-display">CubeRun</div>
+                    <div class="game-display">Unboxing</div>
+                </div>
+            </div>
+            <div class="flip-card-back flip-card-web">
+                <div class="game-display-header">
+                    BLAH
+                </div>
+                <div class="game-display-box">
+                    <div class="game-display">BLAH BLAH</div>
+                    <div class="game-display">BLAH BLAH BLAH</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script type="text/javascript">
+    var flipCardsInner = document.querySelectorAll('.flip-card-inner');
+    var categoryText = document.querySelector('.category-text');
+    categoryText.addEventListener('click', flipPage);
+
+    function flipPage() {
+        flipCardsInner.forEach(f => f.classList.toggle('flip-card-rotate'));
+    }
+</script>
+
+</html>

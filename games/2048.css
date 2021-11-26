@@ -23,18 +23,38 @@
     min-width: 2em;
     min-height: 3em;
     line-height: 3em;
+    max-width: 4em;
 }
+
 
 .game-cell-0{background-color: white;}
 .game-cell-2{background-color: red;}
-.game-cell-4{background-color: blue;}
+.game-cell-4{
+    background-color: blue;
+    color: white;
+}
 .game-cell-8{background-color: orange;}
 .game-cell-16{background-color: green;}
 .game-cell-32{background-color: purple;}
 .game-cell-64{background-color: palevioletred}
-.game-cell-128{}
-.game-cell-256{}
-.game-cell-512{}
-.game-cell-1024{}
-.game-cell-2048{}
-.game-cell-4096{}
+.game-cell-128{background-color: pink}
+
+.game-cell-256 {
+    background-color: #6aff72
+}
+
+.game-cell-512 {
+    background-color: #ffc94e
+}
+
+.game-cell-1024 {
+    background-color: #bf86ff
+}
+
+.game-cell-2048 {
+    background-color: #666666;
+}
+
+.game-cell-4096 {
+    background-color: bisque;
+}

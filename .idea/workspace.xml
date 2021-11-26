@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab61ab49-bb51-49f0-b6f7-3651e214454f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/2048preview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/blackjackPreview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/targetsPreview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newIndex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newmain.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/cards.css" beforeDir="false" afterPath="$PROJECT_DIR$/games/cards.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/cards.html" beforeDir="false" afterPath="$PROJECT_DIR$/games/cards.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/games/cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/2048.css" beforeDir="false" afterPath="$PROJECT_DIR$/games/2048.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/newIndex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newmain.css" beforeDir="false" afterPath="$PROJECT_DIR$/newmain.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +22,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1luiyu2h9jR5UorWdYUPQ3tvrdm" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -39,7 +42,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="liveEdit" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -80,7 +83,9 @@
       <workItem from="1610430018837" duration="7025000" />
       <workItem from="1611294588118" duration="4449000" />
       <workItem from="1612648238601" duration="704000" />
-      <workItem from="1613874949906" duration="1914000" />
+      <workItem from="1613874949906" duration="4846000" />
+      <workItem from="1614754556048" duration="511000" />
+      <workItem from="1637909915125" duration="287000" />
     </task>
     <servers />
   </component>

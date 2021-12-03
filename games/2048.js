@@ -304,15 +304,15 @@ function handleTouchMove(evt) {
 
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
         if ( xDiff > 0 ) {
-            handleKey('ArrowRight');
-        } else {
             handleKey('ArrowLeft');
+        } else {
+            handleKey('ArrowRight');
         }
     } else {
         if ( yDiff > 0 ) {
-            handleKey('ArrowDown');
-        } else {
             handleKey('ArrowUp');
+        } else {
+            handleKey('ArrowDown');
         }
     }
     /* reset values */

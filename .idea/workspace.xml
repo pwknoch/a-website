@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab61ab49-bb51-49f0-b6f7-3651e214454f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/2048.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/2048.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/2048.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/2048.css" beforeDir="false" afterPath="$PROJECT_DIR$/games/2048.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/2048.html" beforeDir="false" afterPath="$PROJECT_DIR$/games/2048.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/games/2048.js" beforeDir="false" afterPath="$PROJECT_DIR$/games/2048.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +88,7 @@
       <workItem from="1637909915125" duration="742000" />
       <workItem from="1638226891461" duration="594000" />
       <workItem from="1638498558712" duration="3056000" />
-      <workItem from="1638501890994" duration="42000" />
+      <workItem from="1638501890994" duration="763000" />
     </task>
     <servers />
   </component>
